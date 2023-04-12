@@ -1,4 +1,4 @@
-name: System
+name: BinSystem
 version: '${project.version}'
 main: com.febrie.bin.BinSystemMain
 loadbefore:
