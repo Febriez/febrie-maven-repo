@@ -1,0 +1,6 @@
+name: System
+version: '${project.version}'
+main: com.febrie.bin.BinSystemMain
+loadbefore:
+  - CashManager
+api-version: 1.19

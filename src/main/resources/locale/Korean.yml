@@ -1,0 +1,170 @@
+msg:
+  load:
+    success: "로딩 성공"
+    fail: "로딩 실패"
+easyFix:
+  txt:
+    cmd:
+      args-not-set:
+        - "/수리권 <제작> [횟수] [개수]"
+        - "- 횟수와 개수를 적지 않으면 1로 처리 됩니다"
+      noRemain:
+        - "&c남은 수리 횟수가 없습니다"
+      useSuccess:
+        - "&a성공적으로 인벤토리의 모든 도구를 수리 하였습니다"
+trashcan:
+  gui:
+    title: "&b쓰레기통"
+IOMSG:
+  txt:
+    join:
+      nonOp:
+        - "&2[&a+&2] &e%player%"
+      Op:
+        - "&2[&a+&2] &e%player%"
+    quit:
+      nonOp:
+        - "&2[&4-&2] &e%player%"
+      Op:
+        - "&2[&4-&2] &e%player%"
+MegaPhone:
+  #cooltime의 기준값='초' (이 값을 변경하려면 MegaPhone.txt.cmd.args-not-set 설명도 변경하세요)
+  cool-time: 180
+  txt:
+    opCMD:
+      args-not-set:
+        - "&d/공지 할말"
+      sendMSGFormat:
+        - "&4&m            &r공지&4&m             "
+        - "&f메세지: %msg%"
+        - "&f작성자: &c&l%player%"
+        - "&4&m                               "
+      sendTitle:
+        title: "%msg%"
+        sub-title: "&c&l%player%"
+    cmd:
+      args-not-set:
+        - " "
+        - "&f/확성기 할말 : 확성기 기능을 사용합니다. &8(쿨타임 180초)"
+        - " "
+      hasCoolDown:
+        - "&c아직 사용할 수 없습니다."
+      sendMSGFormat:
+        - "&m                               "
+        - "&a&l%player%님의 확성기"
+        - " &8&l:: &r%msg%"
+        - "&m                               "
+    cool-done:
+      - " "
+      - "&2&l지금부터 다시 확성기를 사용할 수 있습니다 !"
+Mail:
+  gui:
+    postBoxTitle: "우편함"
+  txt:
+    addItemLore:
+      - ""
+      - "&f보낸 사람: %who%"
+      - "&7보낸 시각: %time%"
+    pick:
+      success: "우편물을 성공적으로 수령 하였습니다"
+      noSpace: "&c우편물을 수령할 공간이 없습니다"
+    cmd:
+      args-not-set:
+        - ""
+        - "&f/우편 보관함 : 받은 우편물들을 확인합니다."
+        - "&f/우편 보내기 <닉네임> : 닉네임에게 손에 들고 있는 아이템을 보냅니다"
+        - ""
+      openBox: "우편함을 열었습니다 [우편물들을 클릭해 수령하세요!]"
+      sendItem:
+        cmd-fail: "&c잘못 된 명령어 조합입니다 &f/우편 보내기 <닉네임>"
+        no-hand: "&c손에 아이템을 들어주세요"
+        not-found-player: "&c서버에 한번도 접속 하지 않은 플레이어입니다"
+        no-empty: "&c상대방의 우편함에 빈자리가 없습니다"
+        success: "&a성공적으로 아이템을 보냈습니다"
+        send-self: "&c자기 자신에게 우편을 보낼 수 없습니다"
+        isOnlineMSG: "&a%player%&f님이 우편을 보냈습니다!"
+Boast:
+  cool-time: 180
+  txt:
+    cmd:
+      cool-down: "&c재사용 대기시간이 끝나지 않았습니다!"
+      no-hand: "&c손에 아이템을 들어주세요"
+      success: "&7&l:: &f%player% &7님의 아이템 자랑 &f&l| "
+Cash:
+  gui:
+    shop:
+      no-cash: "&c이 아이템을 구매할 캐시가 충분하지 않습니다"
+      success: "&a아이템을 구매 하였습니다"
+  cmd:
+    nonOp:
+      check-cash: "&a&l보유 캐시: &f%cash% &a캐시"
+    op:
+      args-not-set:
+        - "/캐시관리 상점"
+        - "/캐시관리 확인 <닉네임>"
+        - "/캐시관리 추가 <닉네임> <값>"
+        - "/캐시관리 차감 <닉네임> <값>"
+        - "/캐시관리 설정 <닉네임> <값>"
+      shop:
+        args-not-set:
+          - "/캐시관리 상점 생성 <이름>"
+          - "/캐시관리 상점 제거 <이름>"
+          - "/캐시관리 상점 열기 <이름>"
+          - "/캐시관리 상점 아이템추가 <이름> <슬롯> <가격>"
+          - "/캐시관리 상점 아이템삭제 <이름> <슬롯>"
+          - "/캐시관리 상점 아이템가격변경 <이름> <슬롯> <가격>"
+          - "/캐시관리 상점등록 <이름>"
+          - "/캐시관리 상점등록취소"
+        create:
+          args-not-set: "/캐시관리 상점 생성 <이름>"
+          duplicateShop: "&c이미 존재하는 상점입니다."
+          success: "%name% 상점을 &a생성 &f하였습니다"
+        remove:
+          args-not-set: "/캐시관리 상점 생성 <이름>"
+          noShop: "&c없는 상점입니다."
+          success: "%name% 상점을 &c제거 &f하였습니다"
+        item-setting:
+          add:
+            args-not-set: "/캐시관리 상점 아이템추가 <상점이름> <슬롯> <가격>"
+            noShop: "&c없는 상점입니다."
+            noItem: "&c손에 아이템을 들어주세요."
+            noInteger: "&c숫자만 가능합니다."
+            invalid-value: "&c값이 잘못 되었습니다."
+            success: "&f아이템을 추가 하였습니다."
+          delete:
+            args-not-set: "/캐시관리 상점 아이템삭제 <상점이름> <슬롯>"
+            noShop: "&c없는 상점입니다."
+            noInteger: "&c숫자만 가능합니다."
+            invalid-value: "&c값이 잘못 되었습니다."
+            success: "&f아이템을 삭제 하였습니다."
+          change-value:
+            args-not-set: "/캐시관리 상점 아이템가격변경 <상점이름> <슬롯> <가격>"
+            noShop: "&c없는 상점입니다."
+            noInteger: "&c숫자만 가능합니다."
+            invalid-value: "&c값이 잘못 되었습니다."
+            success: "&f아이템의 가격을 변경 하였습니다."
+      check:
+        args-not-set: "/캐시관리 확인 <닉네임>"
+        success: "%name%님의 캐시: %cash%"
+      add:
+        args-not-set: "/캐시관리 추가 <닉네임> <값>"
+        noInteger: "&c값은 숫자만 가능합니다."
+        smallThenZero: "&c값은 0보다 커야합니다."
+        success: "%name%님에게 %cash% 캐시를 추가 하였습니다"
+      subtract:
+        args-not-set: "/캐시관리 차감 <닉네임> <값>"
+        noInteger: "&c값은 숫자만 가능합니다."
+        smallThenZero: "&c값은 0보다 커야합니다."
+        success: "%name%님의 캐시를 %cash% 만큼 차감 하였습니다"
+      set:
+        args-not-set: "/캐시관리 설정 <닉네임> <값>"
+        noInteger: "&c값은 숫자만 가능합니다."
+        smallThenZero: "&c값은 0보다 커야합니다."
+        success: "%name%님의 캐시를 %cash% 으(로) 설정 하였습니다"
+UpgradeBook:
+  cmd:
+    args-not-set: "/고급인첸트 <종류> <레벨> <확률>"
+    no-enchant: "&c없는 인첸트 종류입니다"
+    invalid-value: "&c유효하지 않은 레벨 입니다 (1~32767)"
+    invalid-chance: "&c유효하지 않은 확률 입니다 (1~100)"
+    invalid: "&c유효하지 않은 값입니다"
