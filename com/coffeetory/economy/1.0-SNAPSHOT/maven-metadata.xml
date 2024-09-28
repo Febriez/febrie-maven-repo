@@ -3,21 +3,21 @@
   <groupId>com.coffeetory</groupId>
   <artifactId>economy</artifactId>
   <versioning>
-    <lastUpdated>20240928033239</lastUpdated>
+    <lastUpdated>20240928033337</lastUpdated>
     <snapshot>
-      <timestamp>20240928.033239</timestamp>
-      <buildNumber>1</buildNumber>
+      <timestamp>20240928.033337</timestamp>
+      <buildNumber>2</buildNumber>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>1.0-20240928.033239-1</value>
-        <updated>20240928033239</updated>
+        <value>1.0-20240928.033337-2</value>
+        <updated>20240928033337</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.0-20240928.033239-1</value>
-        <updated>20240928033239</updated>
+        <value>1.0-20240928.033337-2</value>
+        <updated>20240928033337</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
