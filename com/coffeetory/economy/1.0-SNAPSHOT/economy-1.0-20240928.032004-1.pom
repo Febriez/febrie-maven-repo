@@ -27,6 +27,7 @@
 
     <build>
         <defaultGoal>clean package</defaultGoal>
+        <finalName>Economy</finalName>
         <plugins>
             <plugin>
                 <groupId>com.github.github</groupId>
@@ -35,12 +36,9 @@
                 <configuration>
                     <message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
                     <noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
-                    <outputDirectory>${project.build.directory}/mvn-repo
-                    </outputDirectory> <!-- matches distribution management repository url above -->
+                    <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
                     <branch>refs/heads/main</branch>                       <!-- remote branch name -->
-                    <includes>
-                        <include>**/*</include>
-                    </includes>
+                    <includes><include>**/*</include></includes>
                     <repositoryName>febrie-maven-repo</repositoryName>      <!-- github repo name -->
                     <repositoryOwner>Febriez</repositoryOwner>    <!-- github username  -->
                 </configuration>
